@@ -1,0 +1,124 @@
+.about-section{
+  background:#f4f4f4;
+  padding:90px 20px;
+  /* margin-top:40px; */
+}
+/* container */
+
+.about-container{
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+
+/* title */
+
+.about-title{
+  font-size:48px;
+  color:#01340cda;
+  margin-bottom:20px;
+  font-weight:700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* description */
+
+.about-description{
+  font-size:20px;
+  line-height:1.7;
+  color:#2f3e46;
+  max-width:900px;
+  margin:auto;
+  margin-bottom:60px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* grid */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+}
+
+/* cards */
+
+.about-card{
+  background:#2f3e463d;
+  padding:40px 30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
+}
+
+
+.about-card:hover{
+  transform:translateY(-5px);
+      box-shadow:0 4px 8px rgb(0, 63, 40);
+    cursor: pointer;
+}
+
+/* card title */
+
+.about-card h3{
+  font-size:25px;
+  color:black;
+  margin-bottom:15px;
+   font-family: "Inter", "Segoe UI", Tahoma, sans-serif ;
+}
+
+/* card text */
+
+.about-card p{
+  font-size:18px;
+  color:#333;
+  line-height:1.6;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif ;
+}
+
+/* -------------------- */
+/* Tablet */
+/* -------------------- */
+
+@media (max-width:900px){
+
+  .about-title{
+    font-size:36px;
+  }
+
+  .about-description{
+    font-size:18px;
+  }
+
+}
+
+/* -------------------- */
+/* Mobile */
+/* -------------------- */
+
+@media (max-width:600px){
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-title{
+    font-size:28px;
+  }
+
+  .about-description{
+    font-size:16px;
+  }
+
+  .about-card{
+    padding:30px 20px;
+
+  }
+  .about-card h3{
+    font-size:20px;
+  }
+  .about-card p{
+    font-size:13px;
+  }
+
+}

@@ -1,0 +1,264 @@
+.featured {
+  padding: 60px 7%;
+  background: #d3ebf5;
+  text-align: center;
+  width: 100%;
+}
+
+/* CONTAINER */
+
+.featured-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TITLE */
+
+.featured-title {
+  font-size: 38px;
+  color: #000321e6;
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+
+.featured-subtitle {
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 930px;
+  margin: 0 auto;
+}
+/* CARD */
+
+.property-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.property-card:hover {
+ cursor: pointer;
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(6, 161, 123, 0.1);}
+
+/* IMAGE */
+
+.property-image {
+   position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  overflow: hidden;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TAG */
+
+.tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #e6b800;
+  color: #065429;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.property-info h3 {
+  font-size: 17px;
+  color: #000000;
+  font-weight: 600;
+  margin: 7px 0 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* VERIFIED */
+
+/* .verified {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+} */
+/* VERIFIED */
+
+.verified {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  padding: 4px 10px;
+  color: #065429;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* VERIFIED ICON */
+
+.verified img{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(28%) 
+          saturate(1235%) hue-rotate(107deg) brightness(93%) contrast(95%);
+}
+
+/* INFO */
+
+.property-info {
+ padding:10px 12px 5px;
+   text-align: left;
+}
+
+.property-location {
+  font-size: 12px;
+  color: #000;
+  display: flex;
+  align-items: center;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  gap: 6px;
+  padding-left: 8px;
+  margin-bottom: 3px;
+}
+
+.property-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:6px;
+  margin-bottom: 4px;
+   padding:0 10px 8px;
+}
+
+.rating{
+  font-size:13px;
+  font-weight:600;
+  color:#090909;
+  margin-left: 10px;
+  
+}
+
+.price{
+  font-size:24px;
+  font-weight:600;
+  color:#1f4d3b;
+  margin-right: 9px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.night{
+  font-size:18px;
+  color:#272727;
+  margin-left: 4px;
+
+  
+}
+
+.night{
+  font-size:13px;
+  color:#2c2b2b;
+  margin-left:4px;
+}
+
+.view-button{
+    background-color: #1f4d3b;
+    color: white;
+    width: 75%;
+    padding: 8px;
+    margin: 8px 0 18px 0;
+    font-size: 20px;
+    border-radius: 5px;
+box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.property-location img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* ===================== */
+/* TABLET */
+/* ===================== */
+
+@media (max-width: 1024px) {
+
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+
+  .featured-title {
+    font-size: 32px;
+  }
+
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media (max-width: 600px) {
+
+    .property-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 100%;
+}
+
+  .featured {
+    padding: 40px 15px;
+
+  }
+
+  .featured-title {
+    font-size: 20px;
+  }
+
+  .featured-subtitle {
+    font-size: 12px;
+    margin-bottom: 35px;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 250px;
+  }
+
+  .property-image {
+    height: 200px;
+  }
+
+}
