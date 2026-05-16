@@ -1,0 +1,25 @@
+import { Navigate } from 'react-router-dom';
+import Cookies from '../helper/cookies';
+import { jwtDecode } from "jwt-decode";
+
+const ProtectedAdminRoute = ({ children }) => {
+    const access_token = Cookies.get('access_token');
+
+    if (!access_token) {
+        return <Navigate to="/signin" replace />;
+    }
+    try {
+        const decodedToken = jwtDecode(access_token);
+        const currentTime = Date.now() / 1000; 
+
+        if (decodedToken.exp < currentTime) {
+            return <Navigate to="/signin" replace />;
+        }
+    } catch (error) {
+        return <Navigate to="/signin" replace />;
+    }
+
+    return children;
+};
+
+export default ProtectedAdminRoute;
